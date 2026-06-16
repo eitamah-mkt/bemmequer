@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 20px 20px 80px 20px; /* padding-bottom aumentado para o rodapé não encobrir conteúdo */
 }
 
 /* Efeito de textura suave no fundo (opcional) */
@@ -239,6 +239,52 @@ h1 {
     color: #C9A84C;
 }
 
+/* ===== FOOTER ===== */
+footer {
+    position: fixed;
+    bottom: 18px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #cfc8b8;
+    letter-spacing: 0.2px;
+    z-index: 10;
+    pointer-events: none;
+    padding: 0 20px;
+}
+
+footer p {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 6px 18px;
+    border-radius: 40px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(232, 226, 212, 0.3);
+    pointer-events: auto;
+}
+
+footer a {
+    color: #C9A84C;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: #b08f3a;
+    text-decoration: underline;
+}
+
+footer .dot {
+    color: #d4cdbd;
+    font-size: 10px;
+    margin-left: 4px;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 480px) {
     .controls {
         top: 15px;
@@ -289,5 +335,13 @@ h1 {
     .info {
         font-size: 10px;
         padding: 6px 12px;
+    }
+
+    footer {
+        bottom: 12px;
+        font-size: 10px;
+    }
+    footer p {
+        padding: 4px 14px;
     }
 }
