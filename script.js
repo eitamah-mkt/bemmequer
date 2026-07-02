@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             activeBtn.classList.add('active');
         }
         
-        localStorage.setItem('bemmequer-lang', lang);
+        localStorage.setItem('siccaroni-lang', lang);
         
         setTimeout(() => {
             isChanging = false;
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    const savedLang = localStorage.getItem('bemmequer-lang') || 'pt';
+    const savedLang = localStorage.getItem('siccaroni-lang') || 'pt';
     
     if (savedLang !== 'pt') {
         setTimeout(() => {
