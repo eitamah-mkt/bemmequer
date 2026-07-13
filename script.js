@@ -1,50 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
-    let isChanging = false;
-    
-    function changeLanguage(lang) {
-        if (isChanging) return;
-        
-        const currentBtn = document.querySelector(`.lang-btn[data-lang="${lang}"]`);
-        if (currentBtn && currentBtn.classList.contains('active')) return;
-        
-        isChanging = true;
-        
-        document.querySelectorAll('.lang-content').forEach(el => {
-            el.classList.remove('active');
-        });
-        
-        document.querySelectorAll('.lang-btn').forEach(el => {
-            el.classList.remove('active');
-        });
-        
-        const activeContent = document.getElementById(`content-${lang}`);
-        const activeBtn = document.querySelector(`.lang-btn[data-lang="${lang}"]`);
-        
-        if (activeContent && activeBtn) {
-            activeContent.classList.add('active');
-            activeBtn.classList.add('active');
-        }
-        
-        localStorage.setItem('siccaroni-lang', lang);
-        
-        setTimeout(() => {
-            isChanging = false;
-        }, 200);
-    }
-    
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const lang = this.getAttribute('data-lang');
-            changeLanguage(lang);
+
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+
+    menuToggle.addEventListener('click', function() {
+        nav.classList.toggle('open');
+    });
+
+    nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('open');
         });
     });
-    
-    const savedLang = localStorage.getItem('siccaroni-lang') || 'pt';
-    
-    if (savedLang !== 'pt') {
-        setTimeout(() => {
-            changeLanguage(savedLang);
-        }, 100);
-    }
+
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 10) {
+            header.style.boxShadow = '0 2px 12px rgba(0, 0, 0, 0.04)';
+        } else {
+            header.style.boxShadow = 'none';
+        }
+    });
 });

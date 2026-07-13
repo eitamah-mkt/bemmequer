@@ -12,163 +12,207 @@
 </head>
 <body>
 
-    <div class="controls">
-        <button class="lang-btn pt active" data-lang="pt" title="Português">
-            <img src="images/brasil.png" alt="Português" class="flag-icon">
-        </button>
-        <button class="lang-btn en" data-lang="en" title="English">
-            <img src="images/eua.png" alt="English" class="flag-icon">
-        </button>
-        <button class="lang-btn es" data-lang="es" title="Español">
-            <img src="images/es.png" alt="Español" class="flag-icon">
-        </button>
-    </div>
+    <!-- HEADER / NAV -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="#topo" class="brand">
+                <img src="images/logo.png" alt="Siccaroni" class="brand-logo">
+                <span class="brand-name">Siccaroni</span>
+            </a>
 
-    <div class="container">
-        <!-- PORTUGUÊS -->
-        <div id="content-pt" class="lang-content active">
-            <div class="logo-wrapper">
-                <img src="images/logo.png" alt="Siccaroni" class="logo">
-            </div>
-            
-            <h1>Siccaroni</h1>
-            <p class="subtitle">Fisioterapia · Quiropraxia · Pilates</p>
-            
-            <div class="divider"></div>
-            
-            <p class="description">Clínica de alto padrão em saúde e movimento</p>
-            
-            <div class="services">
-                <span>Fisioterapia</span>
-                <span>Quiropraxia</span>
-                <span>Pilates Clínico</span>
-            </div>
-            
-            <p class="personalized">Atendimento personalizado</p>
+            <nav class="nav" id="nav">
+                <a href="#quem-somos">Quem Somos</a>
+                <a href="#especialidades">Especialidades</a>
+                <a href="#equipe">Corpo Clínico</a>
+                <a href="#contato">Contato</a>
+            </nav>
 
-            <div class="buttons">
-                <a href="https://wa.me/message/BVZDCDH3BJZ6M1" target="_blank" class="btn">
+            <a href="https://wa.me/message/BVZDCDH3BJZ6M1" target="_blank" class="btn-nav">
+                <i class="fab fa-whatsapp"></i>
+                <span>Agendar Consulta</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- SEÇÃO A: BANNER PRINCIPAL -->
+    <section class="hero" id="topo">
+        <div class="hero-media placeholder-media">
+            <span class="placeholder-tag">[ Foto/vídeo da fachada ou equipe em atendimento — alta resolução, horizontal ]</span>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="eyebrow">Fisioterapia · Quiropraxia · Pilates Clínico</p>
+            <h1>A força do Pilates, o alívio da Quiropraxia e a reabilitação<br class="br-desktop"> da Fisioterapia em um só lugar.</h1>
+            <div class="hero-buttons">
+                <a href="https://wa.me/message/BVZDCDH3BJZ6M1" target="_blank" class="btn btn-primary">
                     <i class="fab fa-whatsapp"></i>
-                    <span>WhatsApp</span>
+                    <span>Agendar Consulta</span>
                 </a>
-                <a href="https://www.google.com/maps/place/Cl%C3%ADnica+Bem+me+Quer/@-23.6353659,-46.5734602,996m/data=!3m1!1e3!4m15!1m8!3m7!1s0x94ce5cc960fc7dfb:0xf090f326ef4122b3!2sR.+Cavalheiro+Ernesto+Giuliano,+120+-+S%C3%A3o+Jos%C3%A9,+S%C3%A3o+Caetano+do+Sul+-+SP,+09571-425!3b1!8m2!3d-23.6353659!4d-46.5708853!16s%2Fg%2F11cpnvbxbz!3m5!1s0x94ce5d006d098435:0x379d84f6a02b7696!8m2!3d-23.6353659!4d-46.5708853!16s%2Fg%2F11y97pfy4k?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn">
+                <a href="#contato" class="btn btn-secondary">
                     <i class="fas fa-map-marker-alt"></i>
                     <span>Localização</span>
                 </a>
-                <a href="https://search.google.com/local/writereview?placeid=ChIJNYQJbQBdzpQRlnYroPaEnTc" target="_blank" class="btn">
-                    <i class="fas fa-star"></i>
-                    <span>Avalie-nos</span>
-                </a>
-            </div>
-
-            <div class="info">
-                <i class="fas fa-location-dot"></i>
-                <span>R. Cavalheiro Ernesto Giuliano, 120 - São José, São Caetano do Sul - SP</span>
-            </div>
-
-            <div class="social">
-                <a href="https://www.instagram.com/clinicabemmequer" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
             </div>
         </div>
+    </section>
 
-        <!-- ENGLISH -->
-        <div id="content-en" class="lang-content">
-            <div class="logo-wrapper">
-                <img src="images/logo.png" alt="Siccaroni" class="logo">
+    <!-- SEÇÃO B: QUEM SOMOS -->
+    <section class="section" id="quem-somos">
+        <div class="section-inner split">
+            <div class="split-text">
+                <p class="section-tag">Quem Somos</p>
+                <h2>Cuidado sob medida para a sua coluna</h2>
+                <div class="divider"></div>
+                <p>O grande diferencial da Clínica Siccaroni está no seu atendimento sob medida, especializado no tratamento da coluna vertebral, onde cada plano de tratamento é desenhado exclusivamente para as necessidades e rotina do paciente.</p>
+                <p>Com uma equipe altamente qualificada e uma estrutura moderna, a clínica se destaca por criar um ambiente acolhedor e seguro, ideal para quem busca reabilitação, prevenção de lesões ou melhora do desempenho físico diário.</p>
             </div>
-            
-            <h1>Siccaroni</h1>
-            <p class="subtitle">Physiotherapy · Chiropractic · Pilates</p>
-            
-            <div class="divider"></div>
-            
-            <p class="description">High standard clinic in health and movement</p>
-            
-            <div class="services">
-                <span>Physiotherapy</span>
-                <span>Chiropractic</span>
-                <span>Clinical Pilates</span>
-            </div>
-            
-            <p class="personalized">Personalized care</p>
-
-            <div class="buttons">
-                <a href="https://wa.me/message/BVZDCDH3BJZ6M1" target="_blank" class="btn">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>WhatsApp</span>
-                </a>
-                <a href="https://www.google.com/maps/place/Cl%C3%ADnica+Bem+me+Quer/@-23.6353659,-46.5734602,996m/data=!3m1!1e3!4m15!1m8!3m7!1s0x94ce5cc960fc7dfb:0xf090f326ef4122b3!2sR.+Cavalheiro+Ernesto+Giuliano,+120+-+S%C3%A3o+Jos%C3%A9,+S%C3%A3o+Caetano+do+Sul+-+SP,+09571-425!3b1!8m2!3d-23.6353659!4d-46.5708853!16s%2Fg%2F11cpnvbxbz!3m5!1s0x94ce5d006d098435:0x379d84f6a02b7696!8m2!3d-23.6353659!4d-46.5708853!16s%2Fg%2F11y97pfy4k?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Location</span>
-                </a>
-                <a href="https://search.google.com/local/writereview?placeid=ChIJNYQJbQBdzpQRlnYroPaEnTc" target="_blank" class="btn">
-                    <i class="fas fa-star"></i>
-                    <span>Rate us</span>
-                </a>
-            </div>
-
-            <div class="info">
-                <i class="fas fa-location-dot"></i>
-                <span>R. Cavalheiro Ernesto Giuliano, 120 - São José, São Caetano do Sul - SP</span>
-            </div>
-
-            <div class="social">
-                <a href="https://www.instagram.com/clinicabemmequer" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
+            <div class="split-media placeholder-media">
+                <span class="placeholder-tag">[ Foto do ambiente interno — recepção, sala de espera ou consultório ]</span>
             </div>
         </div>
+    </section>
 
-        <!-- ESPAÑOL -->
-        <div id="content-es" class="lang-content">
-            <div class="logo-wrapper">
-                <img src="images/logo.png" alt="Siccaroni" class="logo">
-            </div>
-            
-            <h1>Siccaroni</h1>
-            <p class="subtitle">Fisioterapia · Quiropráctica · Pilates</p>
-            
-            <div class="divider"></div>
-            
-            <p class="description">Clínica de alto estándar en salud y movimiento</p>
-            
-            <div class="services">
-                <span>Fisioterapia</span>
-                <span>Quiropráctica</span>
-                <span>Pilates Clínico</span>
-            </div>
-            
-            <p class="personalized">Atención personalizada</p>
+    <!-- SEÇÃO C: ESPECIALIDADES E SERVIÇOS -->
+    <section class="section section-alt" id="especialidades">
+        <div class="section-inner">
+            <p class="section-tag center">Especialidades</p>
+            <h2 class="center">Tratamentos pensados para o seu corpo</h2>
+            <div class="divider center"></div>
 
-            <div class="buttons">
-                <a href="https://wa.me/message/BVZDCDH3BJZ6M1" target="_blank" class="btn">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>WhatsApp</span>
-                </a>
-                <a href="https://www.google.com/maps/place/Cl%C3%ADnica+Bem+me+Quer/@-23.6353659,-46.5734602,996m/data=!3m1!1e3!4m15!1m8!3m7!1s0x94ce5cc960fc7dfb:0xf090f326ef4122b3!2sR.+Cavalheiro+Ernesto+Giuliano,+120+-+S%C3%A3o+Jos%C3%A9,+S%C3%A3o+Caetano+do+Sul+-+SP,+09571-425!3b1!8m2!3d-23.6353659!4d-46.5708853!16s%2Fg%2F11cpnvbxbz!3m5!1s0x94ce5d006d098435:0x379d84f6a02b7696!8m2!3d-23.6353659!4d-46.5708853!16s%2Fg%2F11y97pfy4k?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Ubicación</span>
-                </a>
-                <a href="https://search.google.com/local/writereview?placeid=ChIJNYQJbQBdzpQRlnYroPaEnTc" target="_blank" class="btn">
-                    <i class="fas fa-star"></i>
-                    <span>Reseña</span>
-                </a>
-            </div>
+            <div class="services-grid">
+                <article class="service-card">
+                    <i class="fa-solid fa-person-walking"></i>
+                    <h3>Fisioterapia com Ênfase na Coluna Vertebral</h3>
+                    <p class="service-impact">Liberdade de movimento e uma vida sem as amarras da dor na coluna.</p>
+                    <p class="service-desc">Tratamento especializado e direcionado para a reabilitação, alívio de dores e recuperação de patologias específicas da coluna, promovendo a restauração da mobilidade e das funções do corpo.</p>
+                </article>
 
-            <div class="info">
-                <i class="fas fa-location-dot"></i>
-                <span>R. Cavalheiro Ernesto Giuliano, 120 - São José, São Caetano do Sul - SP</span>
-            </div>
+                <article class="service-card">
+                    <i class="fa-solid fa-hands-holding-circle"></i>
+                    <h3>Quiropraxia</h3>
+                    <p class="service-impact">O alinhamento preciso que seu corpo precisa para viver em máxima potência.</p>
+                    <p class="service-desc">Foco no diagnóstico, tratamento e prevenção de problemas no sistema neuro-músculo-esquelético, realizando ajustes precisos nas articulações (especialmente na coluna) para melhorar a função do sistema nervoso e a saúde geral.</p>
+                </article>
 
-            <div class="social">
-                <a href="https://www.instagram.com/clinicabemmequer" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
+                <article class="service-card">
+                    <i class="fa-solid fa-spa"></i>
+                    <h3>Pilates Clínico</h3>
+                    <p class="service-impact">Fortaleça sua estrutura, corrija sua postura e ganhe vitalidade todos os dias.</p>
+                    <p class="service-desc">Exercícios terapêuticos adaptados e supervisionados por fisioterapeutas para o fortalecimento do core, melhora da postura, flexibilidade e estabilização articular, ideais tanto para a reabilitação quanto para o condicionamento físico seguro.</p>
+                </article>
+
+                <article class="service-card">
+                    <i class="fa-solid fa-apple-whole"></i>
+                    <h3>Nutrição</h3>
+                    <p class="service-impact">Alimente sua saúde de dentro para fora e conquiste mais energia e bem-estar.</p>
+                    <p class="service-desc">Atendimento focado na saúde metabólica, reeducação alimentar e planos nutricionais personalizados que complementam os tratamentos físicos, potencializando a recuperação e o bem-estar do organismo.</p>
+                </article>
+
+                <article class="service-card">
+                    <i class="fa-solid fa-brain"></i>
+                    <h3>Psicologia</h3>
+                    <p class="service-impact">O equilíbrio que sua mente precisa para acolher e cuidar de todo o seu ser.</p>
+                    <p class="service-desc">Suporte emocional e psicoterapêutico essencial para o tratamento integral da saúde, ajudando o paciente a lidar com dores crônicas, ansiedade, estresse e no fortalecimento da conexão entre mente e corpo.</p>
+                </article>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- SEÇÃO D: CORPO CLÍNICO -->
+    <section class="section" id="equipe">
+        <div class="section-inner">
+            <p class="section-tag center">Corpo Clínico</p>
+            <h2 class="center">Profissionais que cuidam de você</h2>
+            <div class="divider center"></div>
+            <p class="pending-note">Conteúdo desta seção aguardando envio pelo cliente: retratos profissionais (headshot, fundo neutro) e dados de cada especialista (nome completo, especialidade e registro — CRM/RQE/CREFITO).</p>
+
+            <div class="team-grid">
+                <article class="team-card placeholder-card">
+                    <div class="team-photo placeholder-media">
+                        <span class="placeholder-tag">[ Foto ]</span>
+                    </div>
+                    <h3 class="placeholder-line">Nome do Profissional</h3>
+                    <p class="placeholder-line">Especialidade</p>
+                    <p class="placeholder-line small">Registro (CRM/RQE)</p>
+                </article>
+                <article class="team-card placeholder-card">
+                    <div class="team-photo placeholder-media">
+                        <span class="placeholder-tag">[ Foto ]</span>
+                    </div>
+                    <h3 class="placeholder-line">Nome do Profissional</h3>
+                    <p class="placeholder-line">Especialidade</p>
+                    <p class="placeholder-line small">Registro (CRM/RQE)</p>
+                </article>
+                <article class="team-card placeholder-card">
+                    <div class="team-photo placeholder-media">
+                        <span class="placeholder-tag">[ Foto ]</span>
+                    </div>
+                    <h3 class="placeholder-line">Nome do Profissional</h3>
+                    <p class="placeholder-line">Especialidade</p>
+                    <p class="placeholder-line small">Registro (CRM/RQE)</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO E: CONTATOS, LINKS E LOCALIZAÇÃO -->
+    <section class="section section-alt" id="contato">
+        <div class="section-inner split">
+            <div class="split-text">
+                <p class="section-tag">Contato</p>
+                <h2>Vamos cuidar da sua coluna</h2>
+                <div class="divider"></div>
+
+                <div class="contact-item">
+                    <i class="fas fa-location-dot"></i>
+                    <span>R. Cavalheiro Ernesto Giuliano, 120 - São José, São Caetano do Sul - SP</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <span class="pending-inline">Horário de funcionamento — aguardando confirmação do cliente</span>
+                </div>
+
+                <div class="buttons">
+                    <a href="https://wa.me/message/BVZDCDH3BJZ6M1" target="_blank" class="btn btn-outline">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://www.google.com/maps/place/Cl%C3%ADnica+Bem+me+Quer/@-23.6353659,-46.5734602,996m/data=!3m1!1e3!4m15!1m8!3m7!1s0x94ce5cc960fc7dfb:0xf090f326ef4122b3!2sR.+Cavalheiro+Ernesto+Giuliano,+120+-+S%C3%A3o+Jos%C3%A9,+S%C3%A3o+Caetano+do+Sul+-+SP,+09571-425!3b1!8m2!3d-23.6353659!4d-46.5708853!16s%2Fg%2F11cpnvbxbz!3m5!1s0x94ce5d006d098435:0x379d84f6a02b7696!8m2!3d-23.6353659!4d-46.5708853!16s%2Fg%2F11y97pfy4k?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Como Chegar</span>
+                    </a>
+                    <a href="https://search.google.com/local/writereview?placeid=ChIJNYQJbQBdzpQRlnYroPaEnTc" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-star"></i>
+                        <span>Avalie-nos</span>
+                    </a>
+                </div>
+
+                <div class="social">
+                    <a href="https://www.instagram.com/clinicabemmequer" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="split-media">
+                <iframe
+                    title="Mapa Clínica Siccaroni"
+                    src="https://www.google.com/maps?q=R.+Cavalheiro+Ernesto+Giuliano,+120+-+S%C3%A3o+Jos%C3%A9,+S%C3%A3o+Caetano+do+Sul+-+SP&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHATSAPP FLUTUANTE -->
+    <a href="https://wa.me/message/BVZDCDH3BJZ6M1" target="_blank" class="whatsapp-float" title="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- FOOTER -->
     <footer>
