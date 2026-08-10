@@ -21,9 +21,8 @@
             </a>
 
             <nav class="nav" id="nav">
-                <a href="#quem-somos">Quem Somos</a>
+                <a href="#sobre">Sobre</a>
                 <a href="#especialidades">Especialidades</a>
-                <a href="#equipe">Corpo Clínico</a>
                 <a href="#contato">Contato</a>
             </nav>
 
@@ -38,21 +37,25 @@
         </div>
     </header>
 
-    <!-- SEÇÃO A: BANNER PRINCIPAL -->
-    <section class="hero" id="topo">
-        <div class="hero-media placeholder-media">
-            <span class="placeholder-tag">[ Foto/vídeo da fachada ou equipe em atendimento — alta resolução, horizontal ]</span>
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <p class="eyebrow">Fisioterapia · Quiropraxia · Pilates Clínico</p>
-            <h1>A força do Pilates, o alívio da Quiropraxia e a reabilitação<br class="br-desktop"> da Fisioterapia em um só lugar.</h1>
+    <!-- SEÇÃO A: IMAGEM DA FACHADA (Apenas a foto) -->
+    <section class="cover-image" id="topo">
+        <img src="images/fachada.jpeg" alt="Fachada da Clínica Siccaroni">
+    </section>
+
+    <!-- SEÇÃO B: TEXTO DE INTRODUÇÃO (Antes de Quem Somos) -->
+    <section class="section section-intro">
+        <div class="section-inner text-center">
+            <p class="section-tag">Fisioterapia · Quiropraxia · Pilates Clínico</p>
+            <h1>A força do Pilates, o alívio da Quiropraxia e a reabilitação da Fisioterapia em um só lugar.</h1>
+            <div class="divider center"></div>
+            <p class="intro-text">Na Siccaroni, você encontra um cuidado sob medida para a sua coluna, com profissionais especializados e um ambiente pensado para o seu bem-estar.</p>
+            
             <div class="hero-buttons">
                 <a href="https://wa.me/message/BVZDCDH3BJZ6M1" target="_blank" class="btn btn-primary">
                     <i class="fab fa-whatsapp"></i>
                     <span>Agendar Consulta</span>
                 </a>
-                <a href="#contato" class="btn btn-secondary">
+                <a href="#contato" class="btn btn-outline">
                     <i class="fas fa-map-marker-alt"></i>
                     <span>Localização</span>
                 </a>
@@ -60,8 +63,8 @@
         </div>
     </section>
 
-    <!-- SEÇÃO B: QUEM SOMOS -->
-    <section class="section" id="quem-somos">
+    <!-- SEÇÃO C: QUEM SOMOS (com slide) -->
+    <section class="section" id="sobre">
         <div class="section-inner split">
             <div class="split-text">
                 <p class="section-tag">Quem Somos</p>
@@ -70,13 +73,30 @@
                 <p>O grande diferencial da Clínica Siccaroni está no seu atendimento sob medida, especializado no tratamento da coluna vertebral, onde cada plano de tratamento é desenhado exclusivamente para as necessidades e rotina do paciente.</p>
                 <p>Com uma equipe altamente qualificada e uma estrutura moderna, a clínica se destaca por criar um ambiente acolhedor e seguro, ideal para quem busca reabilitação, prevenção de lesões ou melhora do desempenho físico diário.</p>
             </div>
-            <div class="split-media placeholder-media">
-                <span class="placeholder-tag">[ Foto do ambiente interno — recepção, sala de espera ou consultório ]</span>
+            
+            <!-- SLIDE DE AMBIENTES -->
+            <div class="split-media slideshow-container">
+                <div class="mySlides fade">
+                    <img src="images/ambiente interno 0.jpeg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/ambiente interno 1.jpeg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/ambiente interno 2.jpeg">
+                </div>
+
+                <!-- Navegação do slide -->
+                <div class="slideshow-dots">
+                    <span class="dot-slide" onclick="currentSlide(1)"></span> 
+                    <span class="dot-slide" onclick="currentSlide(2)"></span> 
+                    <span class="dot-slide" onclick="currentSlide(3)"></span> 
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO C: ESPECIALIDADES E SERVIÇOS -->
+    <!-- SEÇÃO D: ESPECIALIDADES E SERVIÇOS -->
     <section class="section section-alt" id="especialidades">
         <div class="section-inner">
             <p class="section-tag center">Especialidades</p>
@@ -122,43 +142,6 @@
         </div>
     </section>
 
-    <!-- SEÇÃO D: CORPO CLÍNICO -->
-    <section class="section" id="equipe">
-        <div class="section-inner">
-            <p class="section-tag center">Corpo Clínico</p>
-            <h2 class="center">Profissionais que cuidam de você</h2>
-            <div class="divider center"></div>
-            <p class="pending-note">Conteúdo desta seção aguardando envio pelo cliente: retratos profissionais (headshot, fundo neutro) e dados de cada especialista (nome completo, especialidade e registro — CRM/RQE/CREFITO).</p>
-
-            <div class="team-grid">
-                <article class="team-card placeholder-card">
-                    <div class="team-photo placeholder-media">
-                        <span class="placeholder-tag">[ Foto ]</span>
-                    </div>
-                    <h3 class="placeholder-line">Nome do Profissional</h3>
-                    <p class="placeholder-line">Especialidade</p>
-                    <p class="placeholder-line small">Registro (CRM/RQE)</p>
-                </article>
-                <article class="team-card placeholder-card">
-                    <div class="team-photo placeholder-media">
-                        <span class="placeholder-tag">[ Foto ]</span>
-                    </div>
-                    <h3 class="placeholder-line">Nome do Profissional</h3>
-                    <p class="placeholder-line">Especialidade</p>
-                    <p class="placeholder-line small">Registro (CRM/RQE)</p>
-                </article>
-                <article class="team-card placeholder-card">
-                    <div class="team-photo placeholder-media">
-                        <span class="placeholder-tag">[ Foto ]</span>
-                    </div>
-                    <h3 class="placeholder-line">Nome do Profissional</h3>
-                    <p class="placeholder-line">Especialidade</p>
-                    <p class="placeholder-line small">Registro (CRM/RQE)</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
     <!-- SEÇÃO E: CONTATOS, LINKS E LOCALIZAÇÃO -->
     <section class="section section-alt" id="contato">
         <div class="section-inner split">
@@ -173,7 +156,11 @@
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-clock"></i>
-                    <span class="pending-inline">Horário de funcionamento — aguardando confirmação do cliente</span>
+                    <span><strong>Seg, Qua e Sex:</strong> 8h às 20h<br>
+                          <strong>Terça:</strong> 7h10 às 21h<br>
+                          <strong>Sábados alternados:</strong> 8h às 12h<br>
+                          <em style="font-size: 0.9em; color: var(--text-muted);">Atendimento exclusivamente por hora marcada.</em>
+                    </span>
                 </div>
 
                 <div class="buttons">
