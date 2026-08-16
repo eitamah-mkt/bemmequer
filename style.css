@@ -60,6 +60,10 @@ a {
     text-align: center;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .section-tag {
     font-size: 13px;
     color: var(--brown);
@@ -67,42 +71,6 @@ a {
     letter-spacing: 1.5px;
     text-transform: uppercase;
     margin-bottom: 8px;
-}
-
-/* ===== PLACEHOLDERS (aguardando material do cliente) ===== */
-.placeholder-media {
-    background: repeating-linear-gradient(45deg, var(--creme-light), var(--creme-light) 12px, var(--border) 12px, var(--border) 24px);
-    border: 1.5px dashed var(--brown);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 220px;
-}
-
-.placeholder-tag {
-    background: var(--white);
-    color: var(--brown-dark);
-    font-size: 13px;
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 8px;
-    max-width: 80%;
-}
-
-.pending-note {
-    max-width: 640px;
-    margin: 0 auto 40px;
-    text-align: center;
-    color: var(--text-soft);
-    font-style: italic;
-    font-size: 14px;
-}
-
-.pending-inline {
-    color: var(--text-soft);
-    font-style: italic;
 }
 
 /* ===== HEADER ===== */
@@ -197,61 +165,40 @@ a {
     cursor: pointer;
 }
 
-/* ===== HERO ===== */
-.hero {
-    position: relative;
-    min-height: 88vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* ===== COVER IMAGE (Somente a fachada) ===== */
+.cover-image {
+    width: 100%;
+    height: 75vh; /* AUMENTADO DE 60vh PARA 75vh */
+    min-height: 350px; /* AUMENTADO DE 300px PARA 350px */
     overflow: hidden;
 }
 
-.hero-media {
-    position: absolute;
-    inset: 0;
-    border-radius: 0;
-    border: none;
-    min-height: unset;
-    align-items: flex-start;
-    padding-top: 24px;
+.cover-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(27, 27, 27, 0.15) 0%, rgba(27, 27, 27, 0.55) 100%);
+/* ===== SECTION INTRO (Texto abaixo da fachada) ===== */
+.section-intro {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background: var(--creme);
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 780px;
-    text-align: center;
-    padding: 0 24px;
-    color: var(--white);
+.section-intro h1 {
+    font-size: 36px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    color: var(--dark);
 }
 
-.hero .eyebrow {
-    font-size: 14px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--creme-light);
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    color: var(--white);
-    font-size: 42px;
-    line-height: 1.3;
-    margin-bottom: 36px;
-}
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
+.section-intro .intro-text {
+    max-width: 600px;
+    margin: 0 auto 32px auto;
+    color: var(--text-muted);
+    font-size: 16px;
 }
 
 /* ===== BUTTONS ===== */
@@ -279,17 +226,6 @@ a {
     transform: translateY(-2px);
 }
 
-.btn-secondary {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--white);
-    border-color: rgba(255, 255, 255, 0.6);
-}
-
-.btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-}
-
 .btn-outline {
     background: var(--white);
     border-color: var(--border);
@@ -302,6 +238,13 @@ a {
     transform: translateY(-2px);
 }
 
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
 .buttons {
     display: flex;
     flex-wrap: wrap;
@@ -311,7 +254,7 @@ a {
 
 /* ===== SECTIONS ===== */
 .section {
-    padding: 96px 24px;
+    padding: 80px 24px;
 }
 
 .section-alt {
@@ -342,22 +285,79 @@ a {
 .split {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    align-items: center;
+    gap: 40px;
+    align-items: start;
 }
 
+/* ===== SLIDE SHOW ===== */
 .split-media {
-    min-height: 320px;
-    border-radius: 12px;
+    width: 100%;
+    border-radius: 16px;
     overflow: hidden;
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background: var(--border);
 }
 
 .split-media iframe {
     width: 100%;
     height: 100%;
-    min-height: 320px;
     border: 0;
-    border-radius: 12px;
+    border-radius: 16px;
+}
+
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.slideshow-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+}
+
+.dot-slide {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot-slide:hover {
+    background-color: var(--white);
 }
 
 /* ===== ESPECIALIDADES ===== */
@@ -406,43 +406,10 @@ a {
     margin-bottom: 0 !important;
 }
 
-/* ===== EQUIPE ===== */
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 28px;
-}
-
-.team-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 24px;
-    text-align: center;
-}
-
-.team-photo {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    min-height: unset;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    overflow: hidden;
-}
-
-.placeholder-line {
-    color: var(--text-soft);
-    font-style: italic;
-}
-
-.placeholder-line.small {
-    font-size: 13px;
-}
-
 /* ===== CONTATO ===== */
 .contact-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
     margin-bottom: 14px;
     color: var(--text-muted);
@@ -452,6 +419,7 @@ a {
     color: var(--brown);
     font-size: 16px;
     width: 20px;
+    margin-top: 4px;
 }
 
 .social {
@@ -530,6 +498,11 @@ footer .dot {
 }
 
 @media (max-width: 768px) {
+    .cover-image {
+        height: 40vh; /* No celular mantém 40% para não ocupar a tela toda, já que o texto fica embaixo */
+        min-height: 250px;
+    }
+
     .nav {
         position: fixed;
         top: 68px;
@@ -565,12 +538,12 @@ footer .dot {
         display: block;
     }
 
-    .hero h1 {
-        font-size: 30px;
+    .section-intro h1 {
+        font-size: 28px;
     }
 
     .section {
-        padding: 64px 20px;
+        padding: 60px 20px;
     }
 
     .section h2 {
